@@ -119,9 +119,10 @@ class Counter extends React.Component{
   render(){
     return(
       <div id="counter">
-        <p>You have inserted {this.props.numChar} words!</p> {/*Passed from Tweet component as a prop in order to show the number of words */}
+       {/* <p>You have inserted {this.props.numChar} words!</p> Passed from Tweet component as a prop in order to show the number of words */}
         <svg>
           <circle id="gray" cx="50%" cy="50%" r="15"></circle>
+          <text x="50%" y="50%" id="colored" text-anchor="middle" style={this.props.drawRing} dy=".3em">{50 - this.props.numChar}</text>
           <circle id="colored" cx="50%" cy="50%" r="15" style={this.props.drawRing}></circle> {/*Passed from Tweet component as a prop in order to draw the svg circle */}
         </svg>       
       </div>
